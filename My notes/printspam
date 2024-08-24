@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+
+// main() is a function. any code inside the {} will be executed by this function
+// printf() is one of these many functions
+
+//this is funi print function, le use int main() and contained within {} is the print f function.
+//you need to //printf("-insert text");// dont forget the "" and ;
+//return 0 ends the main function
+
+int main() {
+  printf("Hello World! ");
+  printf("el skibiti. ");
+  printf("el amogus kms bismarck best deustch warship.");
+  return 0;
+}
+
+//inserting new line uses \n
+//compile an entire message something inside a single line, tis one bad for readability or somethin
+int main() {
+  printf("Hello World!\nI am learning C.\nAnd it is very skibidi!");
+  return 0;
+}
+
+//le more readable version when using \n
+int main() {
+  printf("Hello World!\n");
+  printf("I am learning C, very skibiti.");
+  return 0;
+}
+
+// \t creates a tab
+int main() {
+  printf("Hello World!\t");
+  printf("I am learning C, this one makes a 'tab' effect.");
+  return 0;
+}
+
+// \\ creates a /, using / may cause complications to funi code
+int main() {
+  printf("Hello World!\\");
+  printf("I am learning C. this adds a '\\' to the funi message");
+  return 0;
+}
+
+// \" creates a double quote character, prolly to avoid complications
+int main() {
+  printf("Hello World!\"");
+  printf("I am learning C. this adds a '\"' effect to the funi message, idk y but eh");
+  return 0;
+}
+
+//this is a comment, duh, it comments things
+
+
+/* this one is a multi-line comment
+
+  allows me to use multiple lines, the standard // doesnt do this
+  
+  use this for readability, otherwise use // when short comments
+*/
