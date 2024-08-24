@@ -1,3 +1,9 @@
-This repo archives my C notes and learnings.
+# C NOTES ARCHIVE RAHHH
+
+```
+This repo archives my C language notes and learnings.
 Use it for self-learning idk.
-Huge thanks to cHat gpT for explaining why somethings dont do funi
+```
+
+
+<sup> Huge thanks to cHat gpT for explaining why somethings dont do funi </sup>
