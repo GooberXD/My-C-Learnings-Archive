@@ -351,4 +351,214 @@ return 0;
 
 }
 
+// you can use this funi tricc to specify output value, we dont want to have iNaCCurAcIeS
 
+#include <stdio.h>
+
+int main(void){
+
+int maxScore = 250;
+int studentScore = 87;
+
+float StudentScorePercentage = (float) studentScore / maxScore  * 100.0;
+
+printf("Your score is %.2f percent, do better next time nerd", StudentScorePercentage);
+return 0;
+
+}
+
+/*
+CONSTANTS
+
+Use the keyword const
+This will declare the variable as "constant", which means unchangeable and read-only, makes it convenient fr
+
+const int numero = 69;  // numero will always be 69 
+numero = 10;  // it prints "error: assignment of read-only variable 'numero'"
+
+declare a variable where it's unlikely to change, fr fr
+
+also, when you declare a variable, it must be assigned with a value,
+
+const int skibidirizz = 69;
+
+you cannot pull a:
+
+const int skibidirizz;
+skibidirizz = 69;
+
+as that is a big no no
+
+according to my soUrCes, when using a const, you should always UPPERCASE the variable for readability
+eg.
+const in SKIBIDIRIZZ = 69;
+
+*/
+
+#include <stdio.h>
+
+int main(void){
+
+const int IDIDTHIS2URMOM = 69;
+const int MANYTIMES = 20691;
+
+printf("I %d'd to your mom %d times, get lost kiD", IDIDTHIS2URMOM, MANYTIMES);
+return 0;
+
+}
+
+/*
+ARITHMETIC OPERATORS
+they're used to do math, its in the name
+this is a funi table for reference
+
+Operator	Name	            Description	                                 Example	
++	        Addition	        Adds together two values	                 x + y	
+-	        Subtraction	        Subtracts one value from another	         x - y	
+*	        Multiplication	    Multiplies two values	                     x * y	
+/	        Division	        Divides one value by another	             x / y	
+%	        Modulus	            Returns the division remainder	             x % y	
+++	        Increment	        Increases the value of a variable by 1       ++x	
+--	        Decrement	        Decreases the value of a variable by 1	     --x
+
+*/
+//eg
+
+#include <stdio.h>
+
+int main(void){
+
+int skibiter = 69;
+int skiber = 500;
+
+int bothal = ++skibiter + skiber;
+
+printf("The number is %d", bothal);
+return 0; //should print 570 cuz of ++ before skibiter
+
+}
+
+/*
+
+ASSIGNMENT OPERATORS
+
+Assignment operators are used to assign le values to variables.
+
+Operator	Example	      Same As	      Explanation
+=	        x = 5	      x = 5	          This simply assigns the value 5 to the variable x.
++=	        x += 3	      x = x + 3	      It adds 3 to the current value of x and then assigns the result back to x.
+-=	        x -= 3	      x = x - 3	      It subtracts 3 from the current value of x and then assigns the result back to x.
+*=	        x *= 3	      x = x * 3	      It multiplies the current value of x by 3 and assigns the result back to x.
+/=	        x /= 3	      x = x / 3	      It divides the current value of x by 3 and assigns the result back to x.
+%=	        x %= 3	      x = x % 3	      It computes the remainder of x divided by 3 and assigns the result back to x.
+&=	        x &= 3	      x = x & 3	      It performs a bitwise AND operation between the current value of x and 3, then assigns the result back to x.
+|=	        x |= 3	      x = x | 3	      It performs a bitwise OR operation between the current value of x and 3, then assigns the result back to x.
+^=	        x ^= 3	      x = x ^ 3	      It performs a bitwise XOR operation between the current value of x and 3, then assigns the result back to x
+>>=	        x >>= 3	      x = x >> 3	  It shifts the bits of x to the right by 3 positions and assigns the result back to x.                                                                                                                                                     
+                                          This effectively divides x by 2^3 (or 8) and assigns the result to x.
+<<=	        x <<= 3	      x = x << 3      It shifts the bits of x to the left by 3 positions and assigns the result back to x. 
+                                          This effectively multiplies x by 2^3 (or 8) and assigns the result to x.
+
+*/
+
+#include <stdio.h>
+
+int main(void){
+// this is my goofy idea on how to demonstrate how this all works fr
+int x = 5;
+
+
+x = 5;
+printf("initial x1 = %d\n", x); //should prints 5
+
+x = 5;
+x += 5;
+printf("x2 = %d\n", x); //should prints 10
+
+x = 5;
+x -= 5;
+printf("x3 = %d\n", x); //should prints 0
+
+x = 5;
+x *= 5;
+printf("x4 = %d\n", x); //should prints 25
+
+x = 5;
+x /= 5;
+printf("x5 = %d\n", x); //should prints 1
+
+x = 5;
+x %= 5;
+printf("x6 = %d\n", x); //should prints 0 due to 5 divide 5 having no remainder
+
+x = 5;
+x &= 10;
+printf("x7 = %d\n", x); //should prints 0 since 5 and 10 bits does not correspond 0101 =/= 1010
+
+x = 5;
+x &= 3;
+printf("x72 = %d\n", x); //should prints 1 since 5 and 3 bits does correspond 0101 == 0011
+
+x = 5;
+x |= 10;
+printf("x8 = %d\n", x); //should prints 15 cuz 5 | 10 = 15 cuz absolute value
+
+x = 5;
+x ^= 10;
+printf("x9 = %d\n", x); //should prints 5
+
+x = 5;
+x >>= 10;
+printf("x10 = %d\n", x); //should prints 5
+
+x = 5;
+x <<= 10;
+printf("x11 = %d\n", x); //should prints 5120 since shifting 's bits to ten to the right gives 0000 0101
+
+return 0;
+}
+
+
+
+
+
+
+/*
+COMPARISON OPERATOR
+Comparison operators are used to compare two values (or variables). 
+This is important in programming, because it helps us to find answers and make decisions.
+
+The return value of a comparison is either 1 or 0, which means true (1) or false (0) aka boolean. 
+
+Operator	Name	                     Example	  Description	
+==	        Equal to	                 x == y	      Returns 1 if the values are equal	 
+!=	        Not equal	                 x != y	      Returns 1 if the values are not equal	 
+>	        Greater than	             x > y	      Returns 1 if the first value is greater than the second value	 
+<	        Less than	                 x < y	      Returns 1 if the first value is less than the second value	 
+>=	        Greater than or equal to	 x >= y	      Returns 1 if the first value is greater than, or equal to, the second value	 
+<=	        Less than or equal to	     x <= y	      Returns 1 if the first value is less than, or equal to, the second value	 
+
+
+
+Logical Operators
+You can also test for true or false values with logical operators.
+
+Logical operators are used to determine the logic between variables or values, by combining multiple conditions:
+
+Operator	   Name	     Example	               Description	
+&& 	           AND	     x < 5 &&  x < 10	       Returns 1 if both statements are true	 
+|| 	           OR	     x < 5 || x < 4	           Returns 1 if one of the statements is true	
+!	           NOT	     !(x < 5 && x < 10)	       Reverse the result, returns 0 if the result is 1
+
+*/
+
+//examples
+
+#include <stdio.h>
+
+int main(void){
+
+
+
+
+}
