@@ -493,32 +493,29 @@ printf("x6 = %d\n", x); //should prints 0 due to 5 divide 5 having no remainder
 
 x = 5;
 x &= 10;
-printf("x7 = %d\n", x); //should prints 0 since 5 and 10 bits does not correspond 0101 =/= 1010
+printf("x7 = %d\n", x); //should prints 0 cuz 5 & 10 = 0 (0101 & 1010 = 0000)
 
 x = 5;
 x &= 3;
-printf("x72 = %d\n", x); //should prints 1 since 5 and 3 bits does correspond 0101 == 0011
+printf("x72 = %d\n", x); //should prints cuz 5 & 3 = 1 (0101 & 0011 = 0001)
 
 x = 5;
 x |= 10;
-printf("x8 = %d\n", x); //should prints 15 cuz 5 | 10 = 15 cuz absolute value
+printf("x8 = %d\n", x); //should prints 15 cuz 5 | 10 = 15 (0101 | 1010 = 1111)
 
 x = 5;
 x ^= 10;
-printf("x9 = %d\n", x); //should prints 5
+printf("x9 = %d\n", x); //should prints 15 cuz 5 ^ 10 = 15 (0101 ^ 1010 = 1111)
 
 x = 5;
 x >>= 10;
-printf("x10 = %d\n", x); //should prints 5
+printf("x10 = %d\n", x); //should prints 0 cuz shifting 5 (0000 0101) right by 10 bits results in 0
 
 x = 5;
 x <<= 10;
-printf("x11 = %d\n", x); //should prints 5120 since shifting 's bits to ten to the right gives 0000 0101
-
+printf("x11 = %d\n", x); //should prints 5120 cuz shifting 5 (0000 0101) left by 10 bits results in 5120 (1010000000000 in binary)
 return 0;
 }
-
-
 
 
 
@@ -538,8 +535,34 @@ Operator	Name	                     Example	  Description
 >=	        Greater than or equal to	 x >= y	      Returns 1 if the first value is greater than, or equal to, the second value	 
 <=	        Less than or equal to	     x <= y	      Returns 1 if the first value is less than, or equal to, the second value	 
 
+*/
+
+#include <stdio.h>
+
+int main(void){
+
+int x = 7, y = 12;
+
+    printf("x == y: %d\n", x == y);
+
+    printf("x != y: %d\n", x != y);
+
+    printf("x > y: %d\n", x > y);
+
+    printf("x < y: %d\n", x < y);
+
+    printf("x >= y: %d\n", x >= y);
+
+    printf("x <= y: %d\n", x <= y);
+
+    return 0;
+
+}
 
 
+
+
+/*
 Logical Operators
 You can also test for true or false values with logical operators.
 
@@ -551,14 +574,27 @@ Operator	   Name	     Example	               Description
 !	           NOT	     !(x < 5 && x < 10)	       Reverse the result, returns 0 if the result is 1
 
 */
-
-//examples
+//example
 
 #include <stdio.h>
 
 int main(void){
 
+int x = 5, y = 14; //modify le value to see diff results
 
+    if(x < 10 && y < 15) {
+        printf("true");}
 
+        else {
+        printf("false");}
+
+    return 0;
 
 }
+
+
+/*
+C BOOLEANS RAHHH
+
+
+*/
