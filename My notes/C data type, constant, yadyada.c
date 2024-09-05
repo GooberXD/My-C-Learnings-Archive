@@ -596,5 +596,65 @@ int x = 5, y = 14; //modify le value to see diff results
 /*
 C BOOLEANS RAHHH
 
+in c, bool data type exists
+essentially represents if something is true or false
+
+you need to import #include <stdbool.h> to able to use boolean
+1 = true
+0 = false
+
+bools are returned as integers so you use %d to print them
+
 
 */
+
+//examples
+//eg 1
+#include <stdbool.h>
+#include <stdio.h>
+
+int main(void){
+
+int xbool;
+bool xboolgreat5;
+
+    printf("Enter a number to see if the number is greater than 5:");
+    scanf("%d", &xbool);
+
+    xboolgreat5 = xbool > 5;
+
+    if(xboolgreat5) {
+        printf("This number is bigger than 5"); }
+    else {
+        printf("nuh uh, not bigger than 5");
+    }
+
+    return 0;
+
+}
+
+//eg 2
+
+#include <stdbool.h>
+#include <stdio.h>
+
+int main(void){
+
+int xboolage;
+bool xboolegalage;
+
+    printf("Enter your age to verify if you can access this very hot 18+ site:");
+    scanf("%d", &xboolage);
+
+    xboolegalage = xboolage >= 18;
+
+    if(xboolegalage) {
+        printf("You may come in, enjoy the fanarts"); }
+    else {
+        printf("nuh uh, why u menor de edad");
+    }
+
+    return 0;
+
+}
+
