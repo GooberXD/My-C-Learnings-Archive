@@ -613,7 +613,7 @@ bools are returned as integers so you use %d to print them
 #include <stdbool.h>
 #include <stdio.h>
 
-int main(void){
+int main(){
 
 int xbool;
 bool xboolgreat5;
@@ -638,7 +638,7 @@ bool xboolgreat5;
 #include <stdbool.h>
 #include <stdio.h>
 
-int main(void){
+int main(){
 
 int xboolage;
 bool xboolegalage;
@@ -658,3 +658,138 @@ bool xboolegalage;
 
 }
 
+/*
+C IF ELSE-ing
+tldr conditional programming, yipeee
+
+Less than: 
+a < b
+
+Less than or equal to: 
+a <= b
+
+Greater than: 
+a > b
+
+Greater than or equal to: 
+a >= b
+
+Equal to:
+a == b
+
+Not Equal to: 
+a != b
+
+
+le conditional statements:
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+
+
+*/
+
+//if example
+
+#include <stdio.h>
+
+int x = 50;
+int y = 10;
+int main(){
+if (x>y) {
+  printf("Hello World");
+} 
+return 0;
+}
+
+//else example
+
+#include <stdio.h>
+
+int money = 69; //change numero to 100 or more and itll print paid debt
+int main(){
+    if (money >= 100) {
+    printf("You paid your debt :D");
+    } 
+    else {printf("sKIBIDI death for you");
+    }
+return 0;
+}
+
+//else if example
+
+#include <stdio.h>
+
+int moneydebt;
+int main(){
+    printf("How much money do you have hmmmm? ");
+    scanf("%d", &moneydebt);
+        if (moneydebt > 100) {
+        printf("You paid your debt :D with some change");
+        } 
+        else if (moneydebt == 100){
+        printf("You paid your debt, ur free");
+        }
+        else {
+        printf("bro how are you broke?");    
+        }
+return 0;
+}
+
+/*
+
+there's also ternary operators that goes like:
+
+int time = 20;
+(time < 18) ? printf("Good day.") : printf("Good evening.");
+              this is true          this is false
+
+tldr just a cleaner if else
+
+ o b s e r v e 
+
+*/
+
+#include <stdio.h>
+
+int ageurmom;
+
+int main(){
+    printf("How old is your mom? ");
+    scanf("%d", &ageurmom);
+
+    (ageurmom >= 18) ? printf("I humped your mom %d times", ageurmom) : printf("ur mom's too young bro");
+
+return 0;
+
+}
+
+//finding out a number is even or odd
+
+#include <Stdio.h>
+
+int myNume;
+int main(){
+
+    printf("Find out if your number is even or odd :D: ");
+    scanf("%d", &myNume);
+    if (myNume % 2 == 0) {
+    printf("%d is even.", myNume);
+    } else {
+    printf("%d is odd.", myNume);
+    }
+
+return 0;
+
+}
+
+/*
+
+C Switches yipeee
+
+instead of spamming if elses, you can just use switches (yandev moment)
+
+
+
+*/
