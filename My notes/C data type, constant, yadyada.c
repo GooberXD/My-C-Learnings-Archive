@@ -790,6 +790,36 @@ C Switches yipeee
 
 instead of spamming if elses, you can just use switches (yandev moment)
 
+default is used as default (duh) if there is no case match
+oBSeRvEe
+
+
+*/
+#include <stdio.h>
+
+int main(){
+
+    int numSus;
+
+    printf("What is your chosen number? ");
+    scanf("%d", &numSus);
+
+    switch (numSus) {
+    case 69:
+        printf("Nice");
+        break;
+    case 420:
+        printf("Weed day haha funi");
+        break;
+    default:
+        printf("Numero %d, nice number bro", numSus);
+    }
+
+    return 0;
+}
+
+/*
+WHILE LOOP
 
 
 */
