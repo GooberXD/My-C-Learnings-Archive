@@ -821,5 +821,88 @@ int main(){
 /*
 WHILE LOOP
 
+tldr basically executes a block of code until a condition is met
+
+while essentially loops around the code so long as the specified condition is true
 
 */
+
+//eg
+
+#include <stdio.h>
+
+int num = 0;
+
+    int main(){
+    while (num <= 5) {
+    printf("%d\n", num); //should print 0 1 2 3 4 5
+    num++;
+    }
+
+    return 0;
+
+}
+
+/*
+DO WHILE LOOP
+
+basically just a variant of the while loop
+
+tldr loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+*/
+
+#include <stdio.h>
+
+int i = 1;
+
+int main(){
+do {
+  printf("%d\n", i);
+  i++;
+}
+while (i < 5); //should print out 1 2 3 4
+
+}
+
+//some examples i made up
+
+//eg1- while loop that prints out the even numbers between 0 to 20 (inclusive)
+
+#include <stdio.h>
+
+int even = 0;
+
+int main(){
+
+    while (even <= 20)
+    {
+        printf("%d\n", even);
+        even+=2;
+    }
+    
+}
+
+//eg2- while loop that prints out the sum of even numbers between 0 to 20 (inclusive + summing)
+
+#include <stdio.h>
+
+int even = 0, sumEven = 0;
+
+int main(){
+
+    printf("These are the list of even numbers: \n");
+    while (even <= 20)
+    {
+        printf("%d\n", even);
+        sumEven += even;
+        even+=2;
+    }
+
+    printf("The sum of all even numbers between 0 to 20 is %d", sumEven);
+    return 0;
+    
+}
+
+
+
