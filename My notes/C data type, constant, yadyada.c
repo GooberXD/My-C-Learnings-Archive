@@ -904,5 +904,138 @@ int main(){
     
 }
 
+/*
+FOR LOOP
+for (expression 1; expression 2; expression 3) {  }
+Expression 1 is executed (one time) before the execution of the code block.
 
+Expression 2 defines the condition for executing the code block.
+
+Expression 3 is executed (every time) after the code block has been executed.
+*/
+
+#include <stdio.h>
+
+int i;
+int main(){
+for (i = 0; i < 5; i++) {
+  printf("%d\n", i); 
+}
+
+return 0;
+}
+
+/*
+Example prints  0 1 2 3 4
+Expression 1 sets a variable before the loop starts (int i = 0).
+
+Expression 2 defines the condition for the loop to run (i must be less than 5). 
+If the condition is true, the loop will start over again, if it is false, the loop will end.
+
+Expression 3 increases a value (i++) each time the code block in the loop has been executed.
+
+
+NESTED LOOPS
+
+tldr loops inside loops
+the inner loop gets executed for each time the outer loop is executed
+*/
+
+#include <stdio.h>
+
+int i, j;
+
+main(){
+// Outer loop
+for (i = 1; i <= 2; ++i) {
+  printf("Outer: %d\n", i);  // Executes twice
+
+  // Inner loop
+  for (j = 1; j <= 3; ++j) {
+    printf(" Inner: %d\n", j);  // Executes 6 times cuz of 2 * 3
+  }
+}
+return 0;
+}
+
+//another ex, sum of all numbers between 1 and 50 that are divisible by 5. 
+//Use a for loop to iterate through the numbers and add only those divisible by 5 to the total sum.
+
+#include <stdio.h>
+int i, sum = 0;
+
+int main(){
+
+    for(i = 0; i <= 50; i+=5) {
+        printf("%d\n", i);
+        sum += i;
+    }
+    
+    printf("The sum of all numbers divisible by 5 from 0-50 is %d", sum); 
+return 0;
+}
+
+//use for loop that prints the multiplication table for a given number n (from 1 to 10). 
+//The program should ask the user for the number n and then use a for loop to print the multiplication table for that number.
+
+#include <stdio.h>
+
+int i, num, mult;
+
+int main(){
+
+    printf("What is your chosen number from 1-10 for multiplication table? ");
+    scanf("%d", &num);
+
+    for(i = 1; i <= 10; i++) {
+        mult = num * i;
+        printf("%d * %d = %d\n", num, i, mult);
+    }
+       
+return 0;
+
+}
+
+//Use a for loop to find the factorial of a given number n. 
+//The program should ask the user for a number n and then calculate its factorial.
+
+#include <stdio.h>
+
+int i, num, factorres = 1;
+
+int main(){
+
+    printf("What is your number to find out the factorial? ");
+    scanf("%d", &num);
+
+    for(i = 1; i <= num; i++) {
+        factorres *= i;
+    }
+
+    printf("The factorial for %d is %d", num, factorres);
+
+return 0;
+
+}
+
+//calculates the sum of all odd numbers between 1 and 100.
+
+#include <stdio.h>
+
+int i, num, sum = 0;
+
+int main(){
+
+    printf("What is your chosen number to find the the total odd numbers between 1 and chosen number; ");
+    scanf("%d", &num);
+
+    for (i = 1; i <= num; i += 2) {
+        sum += i;
+    }
+
+    printf("The sum of all odd numbers between 1 and %d is %d", num, sum);
+
+return 0;
+
+}
 
