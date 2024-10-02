@@ -1039,3 +1039,36 @@ return 0;
 
 }
 
+/*
+BREAK AND CONTINUE
+
+break statement is used to jump out of the loop
+
+eg:
+
+int i;
+
+for (i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  printf("%d\n", i);
+}
+
+this one counts from 0 to 3, and only prints 0 1 2 3, ending on 4
+
+meanwhile continue breaks an iteration in the loop
+
+eg:
+
+int i;
+
+for (i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  printf("%d\n", i);
+}
+
+this prints 0 1 2 3 5 6 7 8 9 10, it skipped 4
+*/
