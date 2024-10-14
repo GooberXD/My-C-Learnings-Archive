@@ -1088,10 +1088,43 @@ return 0;
 //this prints 0 1 2 3 5 6 7 8 9 10, it skipped 4
 
 
+
+
 /*
 C ARRAYS RAHHHH
 
 Arrays are esentially used to store multiple values inside a variable
+
+eg:  int myNumbers[] = {25, 50, 75, 100};
+
+accessing the array index number is eZ, 0 is the first number, second is the first number
+
+for the funi example, if i say 0, it calls 25, if i say 1, it calls 50
+
+eg;
+int myNumbers[] = {25, 50, 75, 100};
+printf("%d", myNumbers[0]); // le calls numero 25
+
+
+to change a value in the array, do this:
+
+int numero[] = {10, 20, 30 40};
+numero[0] = 22;
+printf("%d", numero[0]); // le prints 22 now
+
+
+
+you can also set an array size like this:
+
+// this declares that this array contains 4 int
+int myNumbers[4];
+
+// Add funi value for each index
+myNumbers[0] = 25;
+myNumbers[1] = 50;
+myNumbers[2] = 75;
+myNumbers[3] = 100;
+
 
 
 
