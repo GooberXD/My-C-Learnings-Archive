@@ -1126,6 +1126,39 @@ myNumbers[2] = 75;
 myNumbers[3] = 100;
 
 
+footnote: make sure the values does not conflict with the data type
 
+
+to get the size of an array, you use the sizeof operator.
+
+
+int myNumbers[] = {10, 25, 50, 75, 100};
+printf("%lu", sizeof(myNumbers)); // Prints 20
+
+
+the reason why it prints 20 is that each int type is worth 4 bytes, and since it contains 5 values,
+that's basically 4x5 = 20 bytes.
+tldr its used for mEMoRy manaGEmENT.
 
 */
+
+//eg
+
+#include <stdio.h>
+
+int main(){
+
+    int numeros[] = {20, 40, 60, 80, 100};
+
+    int length = sizeof(numeros) / sizeof(numeros[0]);
+
+    for (int i = 0; i < length; i++){
+        printf("%d ", numeros[i]);
+    }
+
+    return 0;
+}
+
+
+
+
