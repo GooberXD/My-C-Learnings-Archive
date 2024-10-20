@@ -42,3 +42,33 @@ float compFee(){
     return baseFee;
 
 }
+
+
+//Write a program that: Asks the user to input the number of elements in an array.
+//Takes that many elements as input from the user.
+//Calculates and prints the sum of all the elements in the array.
+
+#include <stdio.h>
+
+
+int main(){
+    int num, sum = 0;
+
+    printf("Enter the numbers of elements: ");
+    scanf("%d", &num);
+
+    int array[num];
+
+    for (int i = 0; i < num; i++){
+        printf("Enter element number %d: ", i + 1);
+        scanf("%d", &array[i]);
+    }
+
+    for (int i = 0; i < num; i++){
+        sum+=array[i];
+    }
+
+    printf("The sum of all elements is %d", sum);
+
+    return 0;
+}
