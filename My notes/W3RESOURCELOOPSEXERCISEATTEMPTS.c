@@ -305,3 +305,124 @@ int main(){
     return 0;
 }
 
+// 15. Write a C program to calculate the factorial of a given number.
+// Test Data :
+// Input the number : 5
+// Expected Output :
+// The Factorial of 5 is: 120 
+
+#include <stdio.h>
+
+int main(){
+    int num, factorial = 1;
+
+    printf("Input number to find factorial: ");
+    scanf("%d", &num);
+
+    for(int i = 1; i <= num; i++){
+        factorial *= i;
+
+    }
+
+    printf("The factorial of %d is %d", num, factorial);
+    return 0;
+}
+
+// 16. Write a C program to display the sum of n terms of even natural numbers.
+// Test Data :
+// Input number of terms : 5
+// Expected Output :
+// The even numbers are :2 4 6 8 10
+// The Sum of even Natural Number upto 5 terms : 30
+
+#include <stdio.h>
+
+int main(){
+    int terms, sumOfEven = 0;
+
+    printf("Input number of terms: ");
+    scanf("%d", &terms);
+
+
+    printf("The even numbers are: \n");
+
+    for(int i = 1; i <= terms; i++){
+        int res = 2 * i;
+        printf("%d ", res);
+
+        sumOfEven += res;
+
+    }
+
+    printf("\nThe sum of even natural numbers of up to %d is %d", terms, sumOfEven);
+
+    return 0;
+}
+
+// 21. Write a program in C to display the sum of the series [ 9 + 99 + 999 + 9999 ...].
+// Test Data :
+// Input the number or terms :5
+// Expected Output :
+// 9 99 999 9999 99999
+// The sum of the saries = 111105
+
+#include <stdio.h>
+#include <math.h>
+
+
+int main(){
+    int terms;
+    float sum = 0;
+
+    printf("Input the number of terms: ");
+    scanf("%d", &terms);
+
+    for(int i = 1; i <= terms; i++){
+        
+        float res = pow(10, i) - 1;
+
+        printf("%.0f ", res);
+
+        sum += res;
+
+    }
+
+    printf("\nThe sum of the series is: %.0f", sum);
+    return 0;
+}
+
+// 22. Write a program in C to print Floyd's Triangle.
+
+// 1 
+// 01
+// 101 
+// 0101 
+// 10101
+
+#include <stdio.h>
+
+int main(){
+    int size;
+
+    printf("Size of Floyd's triangle: ");
+    scanf("%d", &size);
+
+    for(int i = 1; i <= size; i++){
+
+        for(int j = 1; j <= i; j++){
+            if((i + j) % 2 == 0){
+                printf("1");
+            }
+            
+            else{
+                printf("0");
+            }
+        }
+
+        printf("\n");
+
+    }
+
+    return 0;
+}
+
