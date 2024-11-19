@@ -426,3 +426,147 @@ int main(){
     return 0;
 }
 
+// 25. Write a C program that displays the n terms of square natural numbers and their sum.
+// 1 4 9 16 ... n Terms
+// Test Data :
+// Input the number of terms : 5
+// Expected Output :
+// The square natural upto 5 terms are :1 4 9 16 25
+// The Sum of Square Natural Number upto 5 terms = 55
+
+#include <stdio.h>
+
+int main(){
+    int terms, sumOfSquaredNumbers = 0;
+
+    printf("Input the number of terms: ");
+    scanf("%d", &terms);
+
+    printf("The square natural of up to %d terms are: \n", terms);
+
+    for(int i = 1; i <= terms; i++){
+        int res = i * i;
+        printf("%d ", res);
+        sumOfSquaredNumbers += res;
+
+    }
+
+    printf("\nThe sum of squared natural numbers up to %d terms is %d", terms, sumOfSquaredNumbers);
+
+    return 0;
+}
+
+// 26. Write a program in C to find the sum of the series 1 +11 + 111 + 1111 + .. n terms.
+// Test Data :
+// Input the number of terms : 5
+// Expected Output :
+// 1 + 11 + 111 + 1111 + 11111
+// The Sum is : 12345
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int terms, sumOfSeries = 0, res = 0;
+
+    printf("Input the number of terms: ");
+    scanf("%d", &terms);
+
+    for(int i = 1; i <= terms; i++){
+        res = res * 10 + 1;
+
+        printf("%d ", res);
+
+        if(i < terms){
+            printf("+ ");
+        }
+        sumOfSeries += res;
+    }
+
+
+    printf("\nThe sum is %d", sumOfSeries);
+    return 0;
+}
+
+// 27. Write a C program to check whether a given number is a 'Perfect' number or not.
+// Test Data :
+// Input the number : 56
+// Expected Output :
+// The positive divisor : 1 2 4 7 8 14 28
+// The sum of the divisor is : 64
+// So, the number is not perfect
+
+#include <stdio.h>
+
+int main(){
+    int num, sum = 0;
+
+    printf("Input number if it's perfect: ");
+    scanf("%d", &num);
+
+    printf("The positive divisor of the number are: ");
+    for(int i = 1; i < num; i++){
+        if(num % i == 0){
+            printf("%d ", i);
+            sum += i;
+        }
+
+    }
+
+    if(sum == num){
+        printf("\nThe number is perfect!");
+    }
+
+    else{
+        printf("\nThe number is not perfect :<");
+    }
+    return 0;
+}
+
+// C program to print alphabets from a to z
+
+#include <stdio.h>
+
+int main(){
+
+    for(char start = 'a'; start <= 'z'; start++){
+        printf("%c ", start);
+    }
+
+    return 0;
+}
+
+// Write a C program to print all odd numbers from 1 to n using for loop.
+// Example
+// Input;
+// Input upper limit: 10
+// Output
+
+// Odd numbers between 1 to 10:
+// 1, 3, 5, 7, 9
+
+#include <stdio.h>
+
+int main(){
+    int num;
+
+    printf("Input upper limit: ");
+    scanf("%d", &num);
+
+    printf("Odd numbers between 1 and %d:\n", num);
+
+    for(int i = 1; i <= num; i++){
+        if(i % 2 != 0){
+            printf("%d", i);
+
+            if(i < num){
+            printf(", ");
+            }
+        }
+
+        
+    }
+
+    return 0;
+}
+
